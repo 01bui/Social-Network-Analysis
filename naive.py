@@ -6,3 +6,6 @@ def naive(a, b):
         z = z + y
         x = x - 1
     return z
+
+print naive(2,3)
+print naive(4,3)
