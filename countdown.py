@@ -6,7 +6,7 @@ def time(n):
     `print countdown(n)`"""
     steps = 0
     # YOUR CODE HERE
-    steps = 3 + math.ceil(n/5)*2
+    steps = 3 + math.ceil(n/5.0)*2
     return steps
 
 def countdown(x):
