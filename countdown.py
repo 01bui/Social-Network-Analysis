@@ -4,8 +4,6 @@ def time(n):
     """ Return the number of steps
     necessary to calculate
     `print countdown(n)`"""
-    steps = 0
-    # YOUR CODE HERE
     steps = 3 + math.ceil(n/5.0)*2
     return steps
 
