@@ -1,3 +1,4 @@
+
 def naive(a, b):
     x = a
     y = b
@@ -14,6 +15,8 @@ print naive(4,3)
 def time(a):
     # The number of steps it takes to execute naive(a, b)
     # as a function of a
-    steps = 0
-    # your code here
+    steps = 3 + a*2
     return steps
+
+print time(2)
+print time(4)
