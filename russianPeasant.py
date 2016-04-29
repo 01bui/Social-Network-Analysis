@@ -9,6 +9,7 @@ def russian(a,b):
             count += 1
         y = y << 1
         x = x >> 1
+        print x,y,z
     return z, count
 
 print russian(20,7)
