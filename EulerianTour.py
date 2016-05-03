@@ -5,10 +5,21 @@
 # and outputs a list of tuples representing
 # edges between nodes that have an Eulerian tour.
 #
+def edge(x, y):
+    return (x, y) if x < y else (y, x)
 
 def create_tour(nodes):
-    # your code here
-    return []
+    # there are lots of ways to do this
+    # a boring solution could just connect
+    # the first node with the second node
+    # second with third... and the last with the
+    # first
+    tour = []
+    l = len(nodes)
+    for i in range(l):
+        t = edge(nodes[i], nodes[(i+1) % l])
+        tour.append(t)
+    return tour
 
 #########
 
@@ -76,4 +87,7 @@ def is_eulerian_tour(nodes, tour):
 def test():
     nodes = [20, 21, 22, 23, 24, 25]
     tour = create_tour(nodes)
+    print tour
     return is_eulerian_tour(nodes, tour)
+
+test()
