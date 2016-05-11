@@ -42,7 +42,7 @@ def create_tour(nodes):
         connected.append(y)
         tour.append(edge(x, y))
         degree[x] += 1
-        degree[y] += 1
+        degree[y] = 1
     # now make sure each node has an even degree.
     # have the problem of not adding a duplicate edge
     odd_nodes = [k for k, v in degree.items() if v % 2 == 1]
