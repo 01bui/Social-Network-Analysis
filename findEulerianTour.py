@@ -15,6 +15,7 @@ def find_eulerian_tour(graph):
     tour = []
     prevItem = graph[0]
     tour.append(graph[0][0])
+    first = graph[0][0]
     tour.append(graph[0][1])
     for item in graph:
         ix = item[0]
@@ -27,6 +28,7 @@ def find_eulerian_tour(graph):
             tour.append(ix)
         if iy not in tour:
             tour.append(iy)
+    tour.append(first)
     return tour
 
 print find_eulerian_tour([(1, 2), (2, 3), (3, 1)])
